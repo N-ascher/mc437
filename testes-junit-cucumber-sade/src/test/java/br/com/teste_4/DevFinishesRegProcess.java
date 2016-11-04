@@ -45,13 +45,13 @@ public class DevFinishesRegProcess {
 //		driver.close();
 	}
 	
-	@Given("^the registration page is open \"([^\"]*)\"$")
+	@Given("^the registration page is open $")
 	public void the_page_is_open(String page) throws Throwable {
 //		driver.get(page);
 	}
 
 
-	@When("^Dev clicks on “Register” and the form properly filled \"([^\"]*)\"$")
+	@When("^Dev clicks on “Register” and the form properly filled $")
 	//I introduce my username "student@unicamp.br" and password "student"
 	public void DevClicksOnRegister (String buttonName) throws Throwable {
 //		WebElement element = driver.findElement(By.name("username"));
@@ -65,7 +65,7 @@ public class DevFinishesRegProcess {
 //		element3.submit();
 	}
 
-	@Then("^a page should show \"([^\"]*)\"$")
+	@Then("^a page should show $")
 	public void AnEmailShouldBeSent(String email) throws Throwable {
 //		WebDriverWait wait = new WebDriverWait(driver, 15);
 //		wait.until(ExpectedConditions.textToBePresentInElement(By.id("content"), text));
