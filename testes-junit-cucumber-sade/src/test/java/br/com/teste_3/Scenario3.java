@@ -44,13 +44,13 @@ public class DevQueryScenario {
 //		driver.close();
 	}
 	
-	@Given("^the page is open \"([^\"]*)\"$")
+	@Given("^the user is signed in and the page is the query page \"([^\"]*)\"$")
 	public void the_page_is_open(String page) throws Throwable {
 //		driver.get(page);
 	}
 
 
-	@When("^I introduce my username \"([^\"]*)\" and password \"([^\"]*)\"$")
+	@When("^I set my custom query parameters and click the search button")
 	//I introduce my username "student@unicamp.br" and password "student"
 	public void I_click_button (String buttonName) throws Throwable {
 //		WebElement element = driver.findElement(By.name("username"));
@@ -64,7 +64,7 @@ public class DevQueryScenario {
 //		element3.submit();
 	}
 
-	@Then("^a page should show \"([^\"]*)\"$")
+	@Then("^the page shows the list of developers ranked by the parameters")
 	public void a_page_should_show(String pagina) throws Throwable {
 //		WebDriverWait wait = new WebDriverWait(driver, 15);
 //		wait.until(ExpectedConditions.textToBePresentInElement(By.id("content"), text));
