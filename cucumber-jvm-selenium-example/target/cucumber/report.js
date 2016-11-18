@@ -1,59 +1,65 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri('br\com\unicamp\EditProfile\EditProfile.feature');
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri('br\com\unicamp\NonAuthorizedAcess\NonAuthorizedAcess.feature');
 formatter.feature({
   "line": 1,
-  "name": "Edit a developer profile",
-  "description": "As a developer registered at SADE\nI want to edit my profile\nSo that I can update my info",
-  "id": "edit-a-developer-profile",
+  "name": "Deny acess to unauthorized users",
+  "description": "As an user\nI want to acess an out of bounds page\nSo that he can have access to sensible informations",
+  "id": "deny-acess-to-unauthorized-users",
   "keyword": "Feature"
 });
 formatter.scenario({
   "line": 6,
   "name": "results are shown",
   "description": "",
-  "id": "edit-a-developer-profile;results-are-shown",
+  "id": "deny-acess-to-unauthorized-users;results-are-shown",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 7,
-  "name": "the page is open \"https://grupo-5-sade.herokuapp.com/#/\"",
+  "name": "the home page is open \"https://grupo-5-sade.herokuapp.com/#/\"",
   "keyword": "Given "
 });
 formatter.step({
   "line": 8,
-  "name": "i sign in and edit my information",
+  "name": "i sign in and and navigate to \"https://grupo-5-sade.herokuapp.com/#/user-management\"",
   "keyword": "When "
 });
 formatter.step({
   "line": 9,
-  "name": "the new information shows up at my profile",
+  "name": "an error should be shown",
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
       "val": "https://grupo-5-sade.herokuapp.com/#/",
-      "offset": 18
+      "offset": 23
     }
   ],
-  "location": "EditProfileScenario.the_page_is_open(String)"
+  "location": "NonAuthorizedAcessScenario.home_is_open(String)"
 });
 formatter.result({
-  "duration": 2991036239,
+  "duration": 4632105697,
   "status": "passed"
 });
 formatter.match({
-  "location": "EditProfileScenario.fill_information()"
+  "arguments": [
+    {
+      "val": "https://grupo-5-sade.herokuapp.com/#/user-management",
+      "offset": 31
+    }
+  ],
+  "location": "NonAuthorizedAcessScenario.login_and_create_admin(String)"
 });
 formatter.result({
-  "duration": 3402251836,
+  "duration": 1452615850,
   "status": "passed"
 });
 formatter.match({
-  "location": "EditProfileScenario.registration_complete()"
+  "location": "NonAuthorizedAcessScenario.new_admin_created()"
 });
 formatter.result({
-  "duration": 183432280,
+  "duration": 142345373,
   "status": "passed"
 });
 });
