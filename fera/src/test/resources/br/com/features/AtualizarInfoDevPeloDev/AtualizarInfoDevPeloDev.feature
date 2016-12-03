@@ -8,6 +8,6 @@ So that I can properly be chosen to a project
 
 
 Scenario: Dev info atualization by him/herself
-Given the page is open "conpec.com.br/sade/devs/id_dev/edit.php"
+Given the page1 is open "conpec.com.br/sade/devs/id_dev/edit.php"
 When I select click "submit"
 Then It must lead me to the atualizated "conpec.com.br/sade/devs/id_dev.php"
